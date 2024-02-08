@@ -13,6 +13,9 @@ router.post("/entry",async(req,res)=>{
     )
 })
 
-
+router.get("/view",async(req,res)=>{
+    let data=await plantModel.find()
+    res.json(data)
+})
 
 module.exports=router
